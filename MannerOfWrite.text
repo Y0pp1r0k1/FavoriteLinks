@@ -1,0 +1,68 @@
+main関数の書き方
+
+    旧バージョン(Ver1.2まで)
+
+            タイトルの追加をする場合
+                        
+                content(タイトルの題名) = tk.Label(root, text="テキストの詳細")
+                content.place(x=○○, y=○○) ← 指定する場合はxは横に行が変わるごとにだいたい+50, yは縦に行を追加するたびに+20
+        
+                リンクの追加をする場合
+        
+                    link(リンク先の名前) = tk.Label(root, text="リンクの名前" fg="blue") fgはリンクのカラー
+                    link.place(x="○○", y=○○) xはタイトルの追加から+10、yはタイトルの追加と同じ
+                    link.bind("<Button-1>, Lambda e:link_click("リンクのURL"))   <Button-1>(左クリック)が押された時、link_click関数を実行する(引数はURL)  
+        
+            タイトルの追加をした場合はそこの上を複数行開ける(2行以上)
+        
+                テンプレ
+        
+                    タイトルの追加Ver
+                        title = tk.Label(root, text=" ", font=("游ゴシック", 11))
+                        title.place(x= , y= )
+        
+                    リンクの追加Ver
+                            link = tk.Label(root, text="・", fg="blue", font=("游ゴシック", 10))
+                            link.place(x= , y= )
+                            link.bind("<Button-1>", lambda e:link_click(" "))
+        
+                    アプリの起動Ver
+                        app = tk.Label(root, text="・", fg="blue", font=("游ゴシック", 10))
+                        app.place(x= , y= )
+                        app.bind("<Button-1>", lambda e:app_click(rf" app exe file path (userIDの場所(ys082など)は変数 UserName を使う)"))
+
+    新バージョン(2.0から)
+
+            テンプレ
+
+                タイトルの追加Ver
+                    dfes.TitleContent(root, title, text, x, y)
+                        root : root これは固定
+                        title: そのカテゴリ名の総称
+                        text : titleと同じ
+                        x    : 配置したいx座標　
+                        y    : xと同じ
+                        
+                リンクの追加Ver
+                    defs.LinkContent(root, title, text, x, y, url)
+                        root : root  これは固定
+                        title: そのリンク先の名前 (googleだったら <google> みたいな感じ)
+                        text : titleと同じ 
+                               ただ、Web版とリンク版が存在するときは(Web版をつける)　　例：○○(Web版)
+                        x    : 配置したいx座標 ただしタイトルから+10
+                        y    : xと同じ
+                            　 ただし、タイトルの次に来る場合は+25
+                        url  : リンク先のURL (googleだったら <https://www.google.com> みたいな感じ)
+
+                アプリの起動Ver
+
+                    defs.AppContent(root, title, text, x, y, exeUrl)
+                        root    : root  これは固定
+                        title   : そのアプリの名前 (googleだったら <google> みたいな感じ)
+                        text    : titleと同じ
+                                  ただ、Web版とリンク版が存在するときは(Web版をつける)　　例：○○(App版)
+                        x       : 配置したいx座標　ただしタイトルから+10
+                        y       : xと同じ
+                                  ただし、タイトルの次に来る場合は+25
+                        exeUrl  : アプリのURL (googleだったら <app exe file path>)
+
