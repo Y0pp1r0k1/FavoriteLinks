@@ -109,4 +109,6 @@ main()
 
 #ウィンドウの実行
 root.mainloop()
+
+#ウィンドウを閉じる
 root.quit()
