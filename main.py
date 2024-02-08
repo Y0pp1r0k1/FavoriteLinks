@@ -5,7 +5,7 @@ import defs
 
 #ウィンドウの設定
 root = tk.Tk()
-root.title("お気に入りのリンク集")
+root.title("Favorite Links and App")
 root.geometry("1280x720")
 
 #アイコンの設定
@@ -78,30 +78,60 @@ def main():
     #Qiita
     defs.LinkContent(root, "Qiita", "Qiita", 30, 345, "https://qiita.com")
 
+    #WebColorCode
+    defs.LinkContent(root, "WebColorCode", "Web色見本", 30, 365, "https://www.colordic.org/")
+
 
 
     #動画配信サービス
-    defs.TitleContent(root, "VideoService", "動画配信サービス", 20, 370)
+    defs.TitleContent(root, "VideoService", "動画配信サービス", 20, 390)
 
     #Youtube 
-    defs.LinkContent(root, "Youtube", "Youtube", 30, 395, "https://www.youtube.com")
+    defs.LinkContent(root, "Youtube", "Youtube", 30, 415, "https://www.youtube.com")
 
     #Twitch
-    defs.LinkContent(root, "Twitch", "Twitch", 30, 415, "https://www.twitch.tv")
+    defs.LinkContent(root, "Twitch", "Twitch", 30, 435, "https://www.twitch.tv")
 
     #TVer 
-    defs.LinkContent(root, "TVer", "TVer", 30, 435, "https://tver.jp")
+    defs.LinkContent(root, "TVer", "TVer", 30, 455, "https://tver.jp")
 
 
 
     #ブラウザ
-    defs.TitleContent(root, "browser", "ブラウザ", 20, 460)
+    defs.TitleContent(root, "browser", "ブラウザ", 20, 480)
 
     #Chrome
-    defs.AppContent(root, "Chrome", "Chrome", 30, 480, rf"C:\Program Files\Google\Chrome\Application\chrome.exe")
+    defs.AppContent(root, "Chrome", "Chrome", 30, 505, rf"C:\Program Files\Google\Chrome\Application\chrome.exe")
 
     #Edge
-    defs.AppContent(root, "Edge", "Edge", 30, 500, rf"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+    defs.AppContent(root, "Edge", "Edge", 30, 525, rf"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+
+    
+
+    #便利系サイト
+    defs.TitleContent(root, "convenientSite", "便利系サイト", 300, 20)
+
+    #unlimited:waifu2x
+    defs.LinkContent(root, "unlimited:waifu2x", "unlimited:waifu2x", 310, 45, "https://unlimited.waifu2x.net/#google_vignette")
+
+    #URL Shortener
+    defs.LinkContent(root, "URLShortener", "URL Shorttener", 310, 65, "https://tinyurl.com/app")
+
+
+
+    #ゲーム　Site
+    defs.TitleContent(root, "gamesSite", "ゲームリンク（手助け的な）", 300, 90)
+
+    #GenshinBuildCard
+    defs.LinkContent(root, "GenshinBuildCard", "GenshinBuildCard", 310, 115, "https://artifacter.neody.land/ja-JP/genshin/generate?uid=855760492")
+
+    #HSRBuildCard
+    defs.LinkContent(root, "HSRBuildCard", "HSRBuildCard", 310, 135, "https://artifacter.neody.land/ja-JP/hsr/generate?uid=800099957")
+
+
+
+    #ゲーム　App
+    defs.TitleContent(root, "gamesApp", "ゲーム（アプリ）", 300, 165)
 
 
 #main関数の呼び出し
