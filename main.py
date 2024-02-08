@@ -63,8 +63,8 @@ def main():
 
 
 
-    #プログラミング系
-    defs.TitleContent(root, "programming", "プログラミング", 20, 260)
+    #プログラミング系 Site
+    defs.TitleContent(root, "programmingSite", "プログラミング Site", 20, 260)
 
     #GitHub
     defs.LinkContent(root, "GitHub", "GitHub", 30, 285, "https://github.com")
@@ -83,28 +83,39 @@ def main():
 
 
 
+    #プログラミング系　App
+    defs.TitleContent(root, "programmingApp", "プログラミング App", 20, 390)
+
+    #Blender 
+    defs.AppContent(root, "Blender", "Blender", 30, 415, rf"C:\Program Files\Blender Foundation\Blender 4.0\blender-launcher.exe")
+
+    #VisualStudioCode
+    defs.AppContent(root, "VisualStudioCode", "VisualStudioCode", 30, 435, rf"C:\Users\ys082\AppData\Local\Programs\Microsoft VS Code\Code.exe")
+
+
+
     #動画配信サービス
-    defs.TitleContent(root, "VideoService", "動画配信サービス", 20, 390)
+    defs.TitleContent(root, "VideoService", "動画配信サービス", 20, 460)
 
     #Youtube 
-    defs.LinkContent(root, "Youtube", "Youtube", 30, 415, "https://www.youtube.com")
+    defs.LinkContent(root, "Youtube", "Youtube", 30, 485, "https://www.youtube.com")
 
     #Twitch
-    defs.LinkContent(root, "Twitch", "Twitch", 30, 435, "https://www.twitch.tv")
+    defs.LinkContent(root, "Twitch", "Twitch", 30, 505, "https://www.twitch.tv")
 
     #TVer 
-    defs.LinkContent(root, "TVer", "TVer", 30, 455, "https://tver.jp")
+    defs.LinkContent(root, "TVer", "TVer", 30, 525, "https://tver.jp")
 
 
 
     #ブラウザ
-    defs.TitleContent(root, "browser", "ブラウザ", 20, 480)
+    defs.TitleContent(root, "browser", "ブラウザ", 20, 550)
 
     #Chrome
-    defs.AppContent(root, "Chrome", "Chrome", 30, 505, rf"C:\Program Files\Google\Chrome\Application\chrome.exe")
+    defs.AppContent(root, "Chrome", "Chrome", 30, 570, rf"C:\Program Files\Google\Chrome\Application\chrome.exe")
 
     #Edge
-    defs.AppContent(root, "Edge", "Edge", 30, 525, rf"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+    defs.AppContent(root, "Edge", "Edge", 30, 590, rf"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
 
     
 
@@ -120,7 +131,7 @@ def main():
 
 
     #ゲーム　Site
-    defs.TitleContent(root, "gamesSite", "ゲームリンク（手助け的な）", 300, 90)
+    defs.TitleContent(root, "gamesSite", "ゲームリンク Site", 300, 90)
 
     #GenshinBuildCard
     defs.LinkContent(root, "GenshinBuildCard", "GenshinBuildCard", 310, 115, "https://artifacter.neody.land/ja-JP/genshin/generate?uid=855760492")
@@ -131,8 +142,16 @@ def main():
 
 
     #ゲーム　App
-    defs.TitleContent(root, "gamesApp", "ゲーム（アプリ）", 300, 165)
+    defs.TitleContent(root, "gamesApp", "ゲーム App", 300, 165)
 
+    #GenshinImpact
+    defs.AppContent(root, "GenshinImpact", "GenshinImpact", 310, 185, rf"C:\Windows\system32\schtasks.exe /run /tn GenshinImpact")
+
+    #Houkai:StarRail
+    defs.AppContent(root, "Houkai:StarRail", "Houkai:StarRail", 310, 205, rf"C:\Windows\system32\schtasks.exe /run /tn HoukaiStarRail")
+
+    #VALORNAT 
+    defs.AppContent(root, "VALORANT", "VALORANT", 310, 225, rf"C:\Riot Games\Riot Client\RiotClientServices.exe --launch-product=valorant --launch-patchline=live")
 
 #main関数の呼び出し
 main()
