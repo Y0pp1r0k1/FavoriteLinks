@@ -1,4 +1,6 @@
 import customtkinter as CTK
+from pathlib import Path
+
 import CustomLinkDefs as CLD
 import CTkDefs as defs
  
@@ -13,10 +15,6 @@ def NotesWindow() :
     NotesWindow.focus_force()
     NotesWindow.attributes("-topmost", True)
 
-
-    #アイコンの設定
-    logo = CLD.temp_path("./data/icon.ico")
-    NotesWindow.iconbitmap(default=logo)
 
     #注意事項のテキストたち
     defs.labelDef("label", NotesWindow, "重要なお知らせ", 0, 0, CTK.W, "HGS創英角ゴシックUB", 25, 10, 10)

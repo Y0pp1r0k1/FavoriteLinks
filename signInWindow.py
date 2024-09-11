@@ -1,5 +1,7 @@
 import tkinter as tk
 import customtkinter as CTK
+from pathlib import Path
+
 import csv 
 import CustomLinkDefs as CLD
 
@@ -13,9 +15,6 @@ def signIn() :
     signInWindow.focus_force()
     signInWindow.attributes("-topmost", True)
 
-    #ロゴの設定
-    logo=CLD.temp_path("./data/icon.ico")
-    signInWindow.iconbitmap(default=logo)
     
     #ウィンドウの編集
     noneSpace = CTK.CTkLabel(signInWindow, text="")

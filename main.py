@@ -1,5 +1,6 @@
 import customtkinter as ctk
 import os
+from pathlib import Path
 
 import CustomLinkDefs as CLD
 from signInWindow import signIn
@@ -15,14 +16,18 @@ root.geometry("1280x720")
 root.geometry("+300+160")
 
 #アイコンの設定
-logo=CLD.temp_path("./data/icon.ico")
-root.iconbitmap(default=logo)
+
 
 #アプリを起動したUserのIDを取得する処理
 UserName = os.getlogin()
 
 #main
 def main():
+
+    #アイコンの設定
+    #appdir = Path(__file__).parent 
+    #iconfile = appdir / "icon.ico"
+    #root.iconbitmap(iconfile)
 
     #サインイン
     signIn = ctk.CTkButton(root, text="Sign In", font=("游ゴシック", 10), state="disable")
@@ -33,7 +38,6 @@ def main():
     signIn.bind("<Button-1>", lambda e:NotesWindow())
         #SignInWindowが完成したら消す
 
-        
 
     #サインアップ
     signUp = ctk.CTkButton(root, text="Sign Up", font=("游ゴシック", 10), state="disable")
@@ -46,18 +50,20 @@ def main():
 
 
     #設定
-    setting = ctk.CTkButton(root, text="Setting", font=("游ゴシック", 10))
+    setting = ctk.CTkButton(root, text="Setting", font=("游ゴシック", 10), state="disable")
     setting.place(x=1100, y=660)
-    setting.bind("<Button-1>", lambda e:settingWindow())
+    #setting.bind("<Button-1>", lambda e:settingWindow())
         #settingHomeが完成したら元に戻す
 
-    signUp.bind("<Button-1>", lambda e:NotesWindow())
+    setting.bind("<Button-1>", lambda e:NotesWindow())
         #settingHomeが完成したら消す
 
     #カスタムリンク
-    custom = ctk.CTkButton(root, text="Custom link", font=("游ゴシック", 10))
+    custom = ctk.CTkButton(root, text="Custom link", font=("游ゴシック", 10), state="disable")
     custom.place(x=1100, y=620)
-    custom.bind("<Button-1>", lambda e:customWindow())
+    #custom.bind("<Button-1>", lambda e:customWindow())
+
+    custom.bind("<Button-1>", lambda e:NotesWindow())
 
     #タイトルの追加 SNS
     CLD.TitleContent(root,"SNS", "SNS", 20, 20)
@@ -236,9 +242,6 @@ def main():
 
     #ウィンドウの実行
     root.mainloop()
-
-    #ウィンドウを閉じる
-    root.quit()
 
 NotesWindow()
 

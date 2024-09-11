@@ -65,7 +65,7 @@ def temp_path(relative_path):
             import CustomLinkDefs as CLD
 
 
-            logo=CLD.temp_path("./data/icon.ico")
+            logo=CLD.temp_path("icon.ico")
             (ウィンドウの名前).iconbitmap(default=logo)
 
     """
