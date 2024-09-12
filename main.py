@@ -25,9 +25,9 @@ UserName = os.getlogin()
 def main():
 
     #アイコンの設定
-    #appdir = Path(__file__).parent 
-    #iconfile = appdir / "icon.ico"
-    #root.iconbitmap(iconfile)
+    appdir = Path(__file__).parent 
+    iconfile = appdir / "data/icon.ico"
+    root.iconbitmap(iconfile)
 
     #サインイン
     signIn = ctk.CTkButton(root, text="Sign In", font=("游ゴシック", 10), state="disable")
